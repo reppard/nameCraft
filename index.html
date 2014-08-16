@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>NameCraft!</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <body>
+    <div id="name"></div>
+    <select id="syl_count">
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <button type="button">CraftIt!</button>
+    <script>
+      var ent_array = ["Experience", "Orb", "Lead", "Knot", "Painting", "Arrow", "Snowball", "Ghast",
+                       "Fireball", "Blaze", "Ender", "Pearl", "Eye", "Splash", "Potion", "Bottle",
+                       "Enchanting", "Frame", "Wither", "Skull", "Primed", "TNT", "Falling", "Block",
+                       "Firework", "Rocket", "Minecart", "Command", "Boat", "Storage", "Powered", "Hopper",
+                       "Spawner", "Creeper", "Skeleton", "Spider", "Giant", "Zombie", "Slime", "Pigman",
+                       "Enderman", "Cave", "Silverfish", "Magma", "Cube", "Dragon", "Bat", "Witch", "Endermite",
+                       "Guardian", "Pig", "Sheep", "Cow", "Chicken", "Squid", "Wolf", "Mooshroom", "Snow", "Golem",
+                       "Ocelot", "Iron", "Horse", "Rabbit", "Villager", "Crystal"];
+
+      function getName() {
+        var syls = document.getElementById('syl_count').options.selectedIndex + 2;
+        var name = ""
+        for(i = 0; i < syls; i++){
+          name = name + ent_array[Math.floor((Math.random() * ent_array.length) + 1)];
+        }
+        return name;
+      }
+
+      var button = document.getElementsByTagName("button")[0];
+
+      button.onclick = function () {
+        var div = document.getElementById("name");
+        div.innerHTML = "";
+        div.innerHTML = getName();
+      }
+    </script>
+  </body>
+</html>
