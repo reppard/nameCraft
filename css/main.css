@@ -1,3 +1,7 @@
+html, body {
+  margin:0px;
+  padding:0px;
+}
 .colored {
   background-color: #F0EEEE;
 }
@@ -33,6 +37,10 @@ h2 {
   color: #ABABAB;
 }
 
+.container {
+  width:100%;
+}
+
 .btn {
   border:2px solid #f96145;
   border-radius:2px;
@@ -48,4 +56,29 @@ h2 {
   -moz-border-radius-bottomright: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.craftTable {
+  width:100%;
+  margin:0px;
+}
+
+.cell {
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+  background:blue;
+  width: 6.25%;
+  height: 100%;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.tabRows {
+  margin: 0px;
+  padding: 0px;
+  width:100%;
+  height:6.25%;
 }

@@ -24,6 +24,22 @@
         </div>
       </div>
     </div>
+    <div id="craftTable"></div>
     <script src="/js/getname.js"></script>
+    <script>
+      var tableDiv = document.getElementById('craftTable');
+      for(i=0;i<16;i++){
+        tableDiv.innerHTML = tableDiv.innerHTML + '<div class="tabRows"></div>';
+      }
+      for(i=0;i<16;i++){
+        var node = tableDiv.childNodes[i];
+        for(n=0;n<16;n++){
+          node.innerHTML = node.innerHTML + '<div class="cell"></div>';
+        }
+      }
+      var w = document.getElementsByClassName('container')[0].offsetWidth;
+      // tableDiv.style.width = w + 'px';
+      tableDiv.style.height = w + 'px';
+    </script>
   </body>
 </html>
