@@ -1,9 +1,16 @@
 html, body {
   margin:0px;
   padding:0px;
+  font-family:'VT323';
 }
+
+.header {
+  background-color: #A0CAD8;
+  text-align:center;
+}
+
 .colored {
-  background-color: #F0EEEE;
+  background-color:	#B2E0F0;
 }
 
 .row {
@@ -13,7 +20,6 @@ html, body {
 .contcustom {
   text-align: center;
   width: 300px;
-  border-radius: 0.5rem;
   top: 0;
   bottom: 0;
   left: 0;
@@ -25,16 +31,19 @@ html, body {
 
 #name {
   margin-bottom: 17px;
+  font-size:35px;
+  height:25px;
+  line-height: 25px;
   padding: 15px;
   background-color: #ECF4F4;
-  border-radius: 2px;
   border: none;
 }
 
 h2 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #ABABAB;
+  font-size:65px;
+  margin:0px;
+  color: #AFAF9B;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .container {
@@ -42,9 +51,23 @@ h2 {
 }
 
 .btn {
-  border:2px solid #f96145;
+  border:3px solid #f96145;
+  background: #f96145;
   border-radius:2px;
   padding: 10px;
+  font-family:'VT323';
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+
+:focus {
+  outline:none;
 }
 
 .wide {
@@ -64,9 +87,9 @@ h2 {
 }
 
 .cell {
-  -moz-box-shadow:    inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow:         inset 0 0 10px #000000;
+  -moz-box-shadow:    inset 0 0 2px #000000;
+  -webkit-box-shadow: inset 0 0 2px #000000;
+  box-shadow:         inset 0 0 2px #000000;
   background:blue;
   width: 6.25%;
   height: 100%;
