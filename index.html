@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>NameCraft!</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
 
   <body>
-    <div id="name"></div>
-    <select id="syl_count">
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
-    <button type="button">CraftIt!</button>
+    <div class="container">
+      <div class="row colored">
+        <div id="contentdiv" class="contcustom">
+          <h2>NameCraft</h2>
+          <div>
+            <div id="name"></div>
+            <select id="syl_count">
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class='btn' type="button">CraftIt!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       var ent_array = ["Experience", "Orb", "Lead", "Knot", "Painting", "Arrow", "Snowball", "Ghast",
                        "Fireball", "Blaze", "Ender", "Pearl", "Eye", "Splash", "Potion", "Bottle",
