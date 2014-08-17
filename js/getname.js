@@ -27,8 +27,12 @@ var ent_array = ["Acacia", "Activator", "Anvil", "Arrow", "Banner", "Barrier", "
                 "Wall", "Wall-mounted", "Wart", "Water", "WebBlock", "Weighted", "White", "Witch", "Wither", "Wolf",
                 "Wood", "Wooden", "Wool", "Zombie"]
 
+function getSyls() {
+  return document.getElementById('syl_count').options.selectedIndex + 2;
+}
+
 function getName() {
-  var syls = document.getElementById('syl_count').options.selectedIndex + 2;
+  var syls = getSyls();
   var name = ""
   for(i = 0; i < syls; i++){
     name = name + ent_array[Math.floor((Math.random() * ent_array.length))];
@@ -51,12 +55,12 @@ button.onclick = function () {
 //block matrixs'
   var colors = {
     0: 'black',
-    1: '#1F140A', //darkest-brown
-    2: '#DBB84D', //tan
+    1: '#1F140A',//darkest-brown
+    2: '#DBB84D',//tan
     3: '#D6AD33',//dark-tan
     4: '#A37547',//light-brown
     5: '#5C3D1F',//dark-brown
-    6: '#5C1F00'//red-brown
+    6: '#5C1F00' //red-brown
   }
   var craftTableTop = [
     [0,0,0,0,0,6,6,6,6,6,6,0,0,0,0,0],
@@ -88,5 +92,14 @@ for(i=0;i<16;i++){
     node.innerHTML = node.innerHTML + '<div class="cell" style="background:' + colors[craftTableTop[i][n]] + ';"></div>';
   }
 }
-var w = document.getElementsByClassName('container')[0].offsetWidth;
-tableDiv.style.height = w + 'px';
+
+function sizeCraftTable() {
+  var w = document.getElementsByClassName('container')[0].offsetWidth;
+  tableDiv.style.height = w + 'px';
+}
+
+window.addEventListener('resize', function(event){
+  sizeCraftTable();
+});
+
+sizeCraftTable();
