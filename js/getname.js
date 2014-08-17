@@ -25,7 +25,16 @@ var ent_array = ["Acacia", "Activator", "Anvil", "Arrow", "Banner", "Barrier", "
                 "Spruce", "Squid", "Stained", "Stairs", "Stand", "Stem", "Sticky", "Stone", "Storage", "Sugar",
                 "Sunflower", "TNT", "Table", "Tall", "Torch", "Trapdoor", "Trapped", "Tripwire", "Villager", "Vine",
                 "Wall", "Wall-mounted", "Wart", "Water", "WebBlock", "Weighted", "White", "Witch", "Wither", "Wolf",
-                "Wood", "Wooden", "Wool", "Zombie"]
+                "Wood", "Wooden", "Wool", "Zombie"];
+
+function scrollNames(field,count = 0){
+  field.innerHTML = ent_array[Math.floor((Math.random() * ent_array.length))];
+  if(count < 50){
+    setTimeout(function(){
+      scrollNames(field,count + 1);
+    },10);
+  }
+}
 
 function getSyls() {
   return document.getElementById('syl_count').options.selectedIndex + 2;
@@ -44,8 +53,11 @@ var button = document.getElementsByTagName("button")[0];
 
 button.onclick = function () {
   var div = document.getElementById("name");
-  div.innerHTML = "";
-  div.innerHTML = getName();
+  scrollNames(div);
+  setTimeout(function(){
+    div.innerHTML = "";
+    div.innerHTML = getName();
+  },600);
 }
 
 ////////////////////////
