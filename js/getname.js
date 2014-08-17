@@ -2,14 +2,30 @@
 //Random Name Builder
 /////////////////////
 
-var ent_array = ["Experience", "Orb", "Lead", "Knot", "Painting", "Arrow", "Snowball", "Ghast",
-                 "Fireball", "Blaze", "Ender", "Pearl", "Eye", "Splash", "Potion", "Bottle",
-                 "Enchanting", "Frame", "Wither", "Skull", "Primed", "TNT", "Falling", "Block",
-                 "Firework", "Rocket", "Minecart", "Command", "Boat", "Storage", "Powered", "Hopper",
-                 "Spawner", "Creeper", "Skeleton", "Spider", "Giant", "Zombie", "Slime", "Pigman",
-                 "Enderman", "Cave", "Silverfish", "Magma", "Cube", "Dragon", "Bat", "Witch", "Endermite",
-                 "Guardian", "Pig", "Sheep", "Cow", "Chicken", "Squid", "Wolf", "Mooshroom", "Snow", "Golem",
-                 "Ocelot", "Iron", "Horse", "Rabbit", "Villager", "Crystal"];
+var ent_array = ["Acacia", "Activator", "Anvil", "Arrow", "Banner", "Barrier", "Bars",
+                "Bat", "Beacon", "Bed", "Bedrock", "Birch", "Blaze", "Block", "Boat",
+                "Bookshelf", "Bottle", "Brewing", "Brick", "Brown", "BrownMushroomCap",
+                "Bush", "Button", "Cactus", "Cake", "Canes", "Carpet", "Carrot", "Cauldron",
+                "Cave", "Chest", "Chicken", "Clay", "Coal", "Cobblestone", "Cocoa", "Command",
+                "Comparator", "Cow", "Crafting", "Creeper", "Crops", "Crystal", "Cube", "Dandelion",
+                "Dark", "Daylight", "Dead", "Detector", "Diamond", "Dirt", "Dispenser", "Door",
+                "Double", "Dragon", "Dropper", "Egg", "Emerald", "Enchanting", "Enchantment", "End",
+                "Ender", "Enderman", "Endermite", "Experience", "Eye", "Falling", "Fence", "Fire",
+                "Fireball", "Firework", "Flower", "Frame", "Free-standing", "Furnace", "Gate", "Ghast",
+                "Giant", "Glass", "Glowstone", "Gold", "Golem", "Grass", "Gravel", "Guardian", "Hardened",
+                "Hay", "Hook", "Hopper", "Horse", "Ice", "Inverted", "Iron", "Jack", "Jukebox", "Jungle",
+                "Knot", "Ladders", "Lamp", "Lantern", "Lapis", "Lava", "Lazuli", "Lead", "Leaves", "Lever",
+                "Lily", "Magma", "Melon", "Minecart", "Monster", "Mooshroom", "Moss", "Mushroom", "Mycelium",
+                "Nether", "Netherrack", "Note", "Oak", "Oak-Wood", "Obsidian", "Ocelot", "Orb", "Ore", "Packed",
+                "Pad", "Painting", "Pane", "Pearl", "Pig", "Pigman", "Piston", "Planks", "Plant", "Plate",
+                "Poppy", "Portal", "Pot", "Potatoes", "Potion", "Powered", "Pressure", "Primed", "Prismarine",
+                "Pumpkin", "Quartz", "Rabbit", "Rail", "Rails", "Red", "RedMushroomCap", "Redstone", "Rocket",
+                "Sand", "Sandstone", "Sapling", "Sea", "Seed", "Sensor", "Sheep", "Sign", "Silverfish", "Skeleton",
+                "Skull", "Slab", "Slime", "Snow", "Snowball", "Soul", "Spawner", "Spider", "Splash", "Sponge",
+                "Spruce", "Squid", "Stained", "Stairs", "Stand", "Stem", "Sticky", "Stone", "Storage", "Sugar",
+                "Sunflower", "TNT", "Table", "Tall", "Torch", "Trapdoor", "Trapped", "Tripwire", "Villager", "Vine",
+                "Wall", "Wall-mounted", "Wart", "Water", "WebBlock", "Weighted", "White", "Witch", "Wither", "Wolf",
+                "Wood", "Wooden", "Wool", "Zombie"]
 
 function getName() {
   var syls = document.getElementById('syl_count').options.selectedIndex + 2;
