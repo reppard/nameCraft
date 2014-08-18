@@ -27,13 +27,17 @@ var ent_array = ["Acacia", "Activator", "Anvil", "Arrow", "Banner", "Barrier", "
                 "Wall", "Wall-mounted", "Wart", "Water", "WebBlock", "Weighted", "White", "Witch", "Wither", "Wolf",
                 "Wood", "Wooden", "Wool", "Zombie"];
 
-function scrollNames(field,count = 0){
-  field.innerHTML = ent_array[Math.floor((Math.random() * ent_array.length))];
-  if(count < 50){
-    setTimeout(function(){
-      scrollNames(field,count + 1);
-    },10);
-  }
+function scrollNames(field,name){
+  var count = 0;
+  var spinIt = setInterval(function(){
+    field.innerHTML = ent_array[Math.floor(Math.random() * ent_array.length)];
+    count++;
+    if(count==35){
+      clearInterval(spinIt);
+      field.innerHTML = "";
+      field.innerHTML = getName();
+    }
+  },15);
 }
 
 function getSyls() {
@@ -53,11 +57,7 @@ var button = document.getElementsByTagName("button")[0];
 
 button.onclick = function () {
   var div = document.getElementById("name");
-  scrollNames(div);
-  setTimeout(function(){
-    div.innerHTML = "";
-    div.innerHTML = getName();
-  },600);
+  scrollNames(div, getName());
 }
 
 ////////////////////////
