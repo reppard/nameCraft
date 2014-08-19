@@ -7,7 +7,7 @@ html, body {
 h2 {
   font-size:65px;
   margin:0px;
-  color: #AFAF9B;
+  color: #DBB84D;
   text-shadow: 1px 1px 2px #000;
 }
 
@@ -16,12 +16,12 @@ span {
 }
 
 .header {
-  background-color: #A0CAD8;
+  background-color: #A37547;
   text-align:center;
 }
 
 .colored {
-  background-color:	#B2E0F0;
+  background-color:	#DBB84D;
 }
 
 .row {
